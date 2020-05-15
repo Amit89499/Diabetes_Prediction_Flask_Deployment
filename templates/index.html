@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diabetes Prediction</title>
+     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href= "{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+     <div class="login">
+     	<h1>Diabetes Prediction</h1>
+     	<!-- Form to enter prediction -->
+     	<form action="{{ url_for('prediction') }}" method="POST">
+     	<input type="text" name="pregnancies"  placeholder="Enter the pregnancies" required="required">
+     	<br><input type="text" name="glucose"  placeholder="Enter the Glucose" required="required">
+     	<br><input type="text" name="bloodPressure"  placeholder="Enter the BP" required="required">
+     	<br><input type="text" name="SkinThickness"  placeholder="Enter the SkinThickness" required="required">
+     	<br><input type="text" name="Insulin"  placeholder="Enter the Insulin" required="required">
+     	<br><input type="text" name="bmi"  placeholder="Enter the BMI value" required="required">
+     	<br><input type="text" name="DiabetesPedigreeFunction"  placeholder="Enter the DiabetesPedigreeFunction " required="required">
+     	<br><input type="text" name="age"  placeholder="Enter the age" required="required">
+     	<br><input type="text" name="Output"  placeholder="Enter the Output" required="required">
+     	<br><button type="Submit" class="btn btn-primary btn-block btn-large" >Predict</button>
+     	</form> 
+
+     	<div class="abc"> </div>
+     </div>
+</body>
+</html>
